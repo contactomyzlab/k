@@ -151,6 +151,13 @@ public class KRuleHelper {
         }
         
         public static class Property {
+            
+            public static class ObjectRule {
+                
+                public static ListPropertyObjectNotNull assertNotNull(final String message) {
+                    return new ListPropertyObjectNotNull(message);
+                }
+            }
         
             public static class StringRule {
 
