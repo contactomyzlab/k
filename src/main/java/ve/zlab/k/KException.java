@@ -2,7 +2,7 @@ package ve.zlab.k;
 
 import javax.ws.rs.core.Response.Status;
 
-public class KException extends Exception {
+public class KException extends RuntimeException {
 
     private final Status status;
 
