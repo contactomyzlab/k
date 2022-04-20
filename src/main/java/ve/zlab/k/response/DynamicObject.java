@@ -136,7 +136,11 @@ public class DynamicObject {
     }
     
     public Response toResponse() {
-        return Response.ok(this.toJSON()).build();
+        return toResponse(Response.Status.OK);
+    }
+    
+    public Response toResponse(Response.Status status) {
+        return Response.status(status).entity(this.toJSON()).build();
     }
     
     public String toJSON() {
