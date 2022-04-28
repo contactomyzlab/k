@@ -3,6 +3,7 @@ package ve.zlab.core.helper.security.validator.model;
 public class KRuleHelper {
     
     public static class SQLRule {
+        
         public static SqlExistsByColumn assertExistsByColumn(final String table, final String column, final String message, final WhereProperty... whereProperties) {
             return new SqlExistsByColumn(table, column, message, whereProperties);
         }
@@ -21,6 +22,7 @@ public class KRuleHelper {
     }
     
     public static class LongRule {
+        
         public static LongMax assertMax(final Long max, final String message) {
             return new LongMax(max, message);
         }
@@ -39,6 +41,7 @@ public class KRuleHelper {
     }
     
     public static class StringRule {
+        
         public static StringNotNullNotEmpty assertNotNullNotEmpty(final String message) {
             return new StringNotNullNotEmpty(message);
         }
@@ -86,9 +89,26 @@ public class KRuleHelper {
         public static StringIn assertIn(final String[] list, final String message) {
             return new StringIn(list, message);
         }
+        
+        public static StringOnlyLowercaseLetters assertOnlyLowercaseLetters(final String message) {
+            return new StringOnlyLowercaseLetters(message);
+        }
+        
+        public static StringOnlyUppercaseLetters assertOnlyUppercaseLetters(final String message) {
+            return new StringOnlyUppercaseLetters(message);
+        }
+        
+        public static StringLowercaseLettersUnderscore assertLowercaseLettersUnderscore(final String message) {
+            return new StringLowercaseLettersUnderscore(message);
+        }
+        
+        public static StringUppercaseLettersUnderscore assertUppercaseLettersUnderscore(final String message) {
+            return new StringUppercaseLettersUnderscore(message);
+        }
     }
     
     public static class ObjectRule {
+        
         public static ObjectNotNull assertNotNull(final String message) {
             return new ObjectNotNull(message);
         }
@@ -114,6 +134,7 @@ public class KRuleHelper {
     }
     
     public static class IntegerRule {
+        
         public static IntegerIn assertIn(final Integer[] list, final String message) {
             return new IntegerIn(list, message);
         }
@@ -132,12 +153,14 @@ public class KRuleHelper {
     }
     
     public static class BooleanRule {
+        
         public static BooleanFalse assertFalse(final String message) {
             return new BooleanFalse(message);
         }
     }
     
     public static class ListRule {
+        
         public static ListNotEmpty assertNotEmpty(final String message) {
             return new ListNotEmpty(message);
         }
