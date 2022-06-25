@@ -172,6 +172,12 @@ public class KQuery {
 
         return this;
     }
+    
+    public KQuery onConflictDoNothing() throws KException {
+        this.onConflictDoNothing = true;
+
+        return this;
+    }
 
     public KQuery select(final String... cs) throws KException {
         if (cs == null || cs.length == 0) {
